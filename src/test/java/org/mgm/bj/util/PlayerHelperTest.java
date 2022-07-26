@@ -1,9 +1,9 @@
-package util;
+package org.mgm.bj.util;
 
-import model.Card;
-import model.Deck;
-import model.Hand;
-import model.Suit;
+import org.mgm.bj.model.Card;
+import org.mgm.bj.model.Deck;
+import org.mgm.bj.model.Hand;
+import org.mgm.bj.model.Suit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

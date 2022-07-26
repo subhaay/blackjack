@@ -1,9 +1,10 @@
-package model;
+package org.mgm.bj.model;
 
 public class Card {
     private boolean used;
-    protected int cardValue;
-    protected Suit suit;
+
+    private int cardValue;
+    private Suit suit;
 
     public Card(Suit suit, int cardValue) {
         this.suit = suit;
@@ -12,6 +13,14 @@ public class Card {
 
     public void markAsUsedCard() {
         this.used = false;
+    }
+
+    public int getCardValue() {
+        return cardValue;
+    }
+
+    public Suit getSuit() {
+        return suit;
     }
 
     @Override

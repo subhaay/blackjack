@@ -1,7 +1,10 @@
-package util;
+package org.mgm.bj.util;
 
-import model.*;
-import service.DealerStrategy;
+import org.mgm.bj.business.DealerDecisionMaker;
+import org.mgm.bj.model.Card;
+import org.mgm.bj.model.Deck;
+import org.mgm.bj.model.Hand;
+import org.mgm.bj.model.Suit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +28,7 @@ public class BlackJackHelper {
         while(true) {
             dealerHand.addCardToHand(deck.dealACard());
             System.out.println("Dealing to computer, cards: " + dealerHand.getCardToString());
-            if (!DealerStrategy.hitTill16(dealerHand.getTotal())){
+            if (!DealerDecisionMaker.getStrategy(dealerHand)){
                 if (dealerHand.isBusted()) {
                     System.out.println("Dealer busted.");
                 }

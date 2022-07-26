@@ -1,10 +1,19 @@
-package model;
+package org.mgm.bj.model;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Hand {
+
     protected ArrayList<Card> cardList = new ArrayList<>();
+
+    public ArrayList<Card> getCardList() {
+        return cardList;
+    }
+
+    public void setCardList(ArrayList<Card> cardList) {
+        this.cardList = cardList;
+    }
 
     public void addCardToHand(Card card) {
         this.cardList.add(card);
@@ -18,7 +27,7 @@ public class Hand {
     public int getTotal() {
         int total = 0;
         for (Card card: this.cardList) {
-            int cardValue = card.cardValue;
+            int cardValue = card.getCardValue();
             if (cardValue >= 11 && cardValue <= 13) {
                 cardValue = 10;
             }
@@ -30,9 +39,9 @@ public class Hand {
         return total;
     }
 
-    private boolean isAce() {
+    public boolean isAce() {
         for (Card card: this.cardList) {
-            if (card.cardValue == 1) {
+            if (card.getCardValue() == 1) {
                 return true;
             }
         }

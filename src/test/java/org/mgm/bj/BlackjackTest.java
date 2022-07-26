@@ -1,12 +1,12 @@
-import org.junit.jupiter.api.Test;
+package org.mgm.bj;
 
+import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.util.Scanner;
 
-import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.mock;
-
 public class BlackjackTest {
+
+    private static String MAIN_CLASS_PATH = "src/main/java/org/mgm/bj/Blackjack.java";
     @Test
     void testMainMethodInvalid() throws FileNotFoundException {
         String data = "stand";
@@ -14,7 +14,7 @@ public class BlackjackTest {
         Scanner scanner = new Scanner(System.in);
         String[] args = {"a"};
         final InputStream original = System.in;
-        final FileInputStream fips = new FileInputStream(new File("src/main/java/Blackjack.java"));
+        final FileInputStream fips = new FileInputStream(new File(MAIN_CLASS_PATH));
         System.setIn(fips);
         Blackjack.main(args);
         System.setIn(original);
@@ -27,7 +27,7 @@ public class BlackjackTest {
         Scanner scanner = new Scanner(System.in);
         String[] args = {"4"};
         final InputStream original = System.in;
-        final FileInputStream fips = new FileInputStream(new File("src/main/java/Blackjack.java"));
+        final FileInputStream fips = new FileInputStream(new File(MAIN_CLASS_PATH));
         System.setIn(fips);
         Blackjack.main(args);
         System.setIn(original);

@@ -1,6 +1,9 @@
-package model;
+package org.mgm.bj.model;
 
 import org.junit.jupiter.api.Test;
+import org.mgm.bj.model.Card;
+import org.mgm.bj.model.Hand;
+import org.mgm.bj.model.Suit;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,7 +1,7 @@
-package util;
+package org.mgm.bj.util;
 
-import model.Deck;
-import model.Hand;
+import org.mgm.bj.model.Deck;
+import org.mgm.bj.model.Hand;
 
 import java.util.List;
 import java.util.Scanner;
