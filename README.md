@@ -17,7 +17,7 @@ Run `nvm test` to execute the unit tests. PrintStream and ByteArrayOutputStream 
 ## Code Coverage
 Jacoco is used for code coverage for java. Coverage report can be found in `/target/site/jacoco/index.html`. Screenshot attached below.
 
-![Code Coverage](/images/code_coverage.png?raw=true "Loading Screen")
+![Code Coverage](/images/coverage_report.png?raw=true "Code Coverage")
 
 ## Blackjack Program Guide
 

@@ -15,7 +15,6 @@ public class PlayerHelper {
             while (true) {
                 System.out.println("Hit or Stand?");
                 String userInput;
-
                 while (true) {
                     userInput = scan.nextLine();
                     if (userInput.equals("hit") || userInput.equals("stand")) {
@@ -24,7 +23,6 @@ public class PlayerHelper {
                         System.out.println("Please respond with Hit or Stand?");
                     }
                 }
-
                 if (userInput.equals("hit")) {
                     handList.get(playerCount).addCardToHand(deck.dealACard());
                     System.out.println("Dealing to player " + (playerCount + 1) + " card: " + handList.get(playerCount).getCardToString());
@@ -35,7 +33,6 @@ public class PlayerHelper {
                 } else {
                     break;
                 }
-
             }
         }
     }
