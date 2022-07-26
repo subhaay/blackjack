@@ -25,12 +25,28 @@ public class BlackjackTest {
         String data = "hit";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Scanner scanner = new Scanner(System.in);
-        String[] args = {"4"};
+        String[] args = {"5"};
         final InputStream original = System.in;
-        final FileInputStream fips = new FileInputStream(new File(MAIN_CLASS_PATH));
+        final FileInputStream fips = new FileInputStream(MAIN_CLASS_PATH);
         System.setIn(fips);
         Blackjack.main(args);
         System.setIn(original);
     }
+
+    @Test
+    void testMainMethodExceedPlayer2() throws FileNotFoundException {
+        String data = "hit";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        Scanner scanner = new Scanner(System.in);
+        String[] args = {"1"};
+        final InputStream original = System.in;
+        final FileInputStream fips = new FileInputStream(MAIN_CLASS_PATH);
+
+        System.setIn(fips);
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        Blackjack.main(args);
+        System.setIn(original);
+    }
+
 
 }

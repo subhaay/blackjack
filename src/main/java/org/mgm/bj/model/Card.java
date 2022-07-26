@@ -2,7 +2,6 @@ package org.mgm.bj.model;
 
 public class Card {
     private boolean used;
-
     private int cardValue;
     private Suit suit;
 
