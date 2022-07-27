@@ -88,4 +88,5 @@ In the design there are Card, Deck, Hand and Suit as model objects.
 
 ## Java Docs
 Java Docs has been generated and can be accessed within javadocs folder. 
+
 ![Java Doc](/images/javaDoc.png?raw=true "Java Docs")
