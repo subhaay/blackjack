@@ -9,7 +9,17 @@ import org.mgm.bj.model.Suit;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * BlackJackHelper is responsible for initializing players, setting up the deck, shuffling the cards, setting up the hands,
+ * option to hit/stand for additional card, calculating the total score and finding the blackjack winner
+ * @author avipokhrel
+ */
 public class BlackJackHelper {
+    /**
+     * This method compares dealer and player hand; and finds the winner.
+     * @param handList
+     * @param dealerHand
+     */
     public static void findBlackjackWinner(List<Hand> handList, Hand dealerHand) {
         for (int playerCount = 0; playerCount < handList.size(); playerCount++) {
             if (handList.get(playerCount).isBusted()) {
@@ -24,6 +34,11 @@ public class BlackJackHelper {
         }
     }
 
+    /**
+     * This method is used to play dealers hand.
+     * @param dealerHand
+     * @param deck
+     */
     public static void playDealerHand(Hand dealerHand, Deck deck){
         while(true) {
             dealerHand.addCardToHand(deck.dealACard());
@@ -42,6 +57,10 @@ public class BlackJackHelper {
         }
     }
 
+    /**
+     * This method sets up the deck.
+     * @return
+     */
     public static Deck setupDeck(){
         ArrayList<Card> cardList = new ArrayList<>();
         for (int i = 1; i < 14; i++) {
@@ -56,6 +75,12 @@ public class BlackJackHelper {
         return deck;
     }
 
+    /**
+     * This method sets up the first round for the players and the dealer.
+     * @param handList
+     * @param deck
+     * @param dealerHand
+     */
     public static void setupFirstRound(List<Hand> handList, Deck deck, Hand dealerHand) {
         // Deal one card to all the players
         for (int playerCount = 0; playerCount < handList.size(); playerCount++) {

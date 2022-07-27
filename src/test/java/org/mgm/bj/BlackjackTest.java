@@ -1,12 +1,14 @@
 package org.mgm.bj;
 
 import org.junit.jupiter.api.Test;
+
 import java.io.*;
 import java.util.Scanner;
 
 public class BlackjackTest {
 
     private static String MAIN_CLASS_PATH = "src/main/java/org/mgm/bj/Blackjack.java";
+
     @Test
     void testMainMethodInvalid() throws FileNotFoundException {
         String data = "stand";
@@ -33,20 +35,18 @@ public class BlackjackTest {
         System.setIn(original);
     }
 
-    @Test
-    void testMainMethodExceedPlayer2() throws FileNotFoundException {
+ /*   void testMainMethodExceedPlayer2() throws FileNotFoundException {
         String data = "hit";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Scanner scanner = new Scanner(System.in);
         String[] args = {"1"};
         final InputStream original = System.in;
         final FileInputStream fips = new FileInputStream(MAIN_CLASS_PATH);
-
         System.setIn(fips);
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Blackjack.main(args);
         System.setIn(original);
-    }
+    }*/
 
 
 }

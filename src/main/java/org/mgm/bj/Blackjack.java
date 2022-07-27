@@ -12,6 +12,11 @@ import org.mgm.bj.exception.IncorrectNumberOfPlayerException;
 import org.mgm.bj.util.BlackJackHelper;
 import org.mgm.bj.util.PlayerHelper;
 
+/**
+ * Blackjack class is the main class which is the entrypoint to the game and also it takes the number of players as user input and also
+ * it handles the game.
+ * @author avipokhrel
+ */
 public class Blackjack {
     public static void main(String[] args) {
         try {

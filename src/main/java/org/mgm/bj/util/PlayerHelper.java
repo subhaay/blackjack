@@ -6,7 +6,16 @@ import org.mgm.bj.model.Hand;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * PlayerHelper class handles the player hand, giving them option to hit or stand and also calculates the total.
+ * @author avipokhrel
+ */
 public class PlayerHelper {
+    /**
+     * This method add card to players hand based on hit or stand response.
+     * @param handList
+     * @param deck
+     */
     public static void playPlayerHand(List<Hand> handList, Deck deck) {
         Scanner scan = new Scanner(System.in);
         for (int playerCount = 0; playerCount < handList.size(); playerCount++) {

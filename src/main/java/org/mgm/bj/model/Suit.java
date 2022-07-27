@@ -1,5 +1,9 @@
 package org.mgm.bj.model;
 
+/**
+ * Suit class represents the type of the card.
+ * @author avipokhrel
+ */
 public enum Suit {
     Hearts(0), Clubs(1), Spades(2), Diamonds(3);
 
@@ -9,6 +13,11 @@ public enum Suit {
        this.value = value;
     }
 
+    /**
+     * This method gets the Suit type based on value.
+     * @param value
+     * @return
+     */
     public static Suit getSuit(int value) {
         if (value == 0) {
             return Suit.Hearts;

@@ -46,20 +46,42 @@ If the card total score is 17 then check whether it is a soft 17. If the conditi
 
 What is Soft 17?
 
-I have method to calculate soft 17 for example Ace Ace 5 is a soft 17 whereas Ace Jack 6 will not be a soft 17. 
+Separate method has been added to calculate soft 17, for example Ace, Ace, 5 is a soft 17 whereas Ace, Jack, 6 will not be a soft 17. 
 
 ### Simple Strategy
 If the card total score is less than 17, the dealer should hit.
 
 ## Class Diagram
-
+![Class Diagram](/images/class_diagram.png?raw=true "Class Diagram")
 
 ## Design Pattern
 ### Design for dealer strategy:
-For dealer strategy I have put the responsibility to choose a strategy to another class DecisionMaker so that the strategies can be changed independently without changing any code in the main class.
+For dealer strategy, DealerDecisionMaker class has been added which is responsible to choose appropriate deader strategies based on his hand which can also be configured independently without changing any client code. DealerDecisionMaker class uses DealerStrategy class where additional strategies can be added based on business need. 
 
+### Design for black jack game:
+In the design there are Card, Deck, Hand and Suit as model objects.
 
+**Card** represent card values from "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King".
+**Deck** is a set of cards used throughout the black jack game.
+**Suit** represents the type of card from Hearts, Clubs, Spades, Diamonds.
+**Hand** consists of a list of cards and calculates the total score for each player or dealer for a particular hand
 
+**Blackjack** class is a runner class that is responsible for 
+1. Initializing players
+2. Setting up the deck
+3. Shuffling the cards
+4. Setting up the hands
+5. Option to hit/stand for additional card
+6. Calculating the total score
+7. Finding the blackjack winner
 
+**BlackJackHelper** class is responsible for 
+1. Setting up the deck
+2. Setting up first round
+3. Calculating the score 
+4. Find the winner at the end
 
-
+**PlayerHelper** class is responsible for 
+1. Assisting player with game play
+2. Hit/stand option to fetch new card or stand
+3. Calculate the total score of a player's hand
