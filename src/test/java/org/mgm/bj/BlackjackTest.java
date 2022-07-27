@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * BlackjackTest contains test cases for Blackjack.
+ * @author avipokhrel
+ */
 public class BlackjackTest {
 
     private static String MAIN_CLASS_PATH = "src/main/java/org/mgm/bj/Blackjack.java";

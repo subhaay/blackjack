@@ -7,7 +7,10 @@ import org.mgm.bj.model.Suit;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+/**
+ * DealerDecisionMakerTest contains test cases for DealerDecisionMaker.
+ * @author avipokhrel
+ */
 public class DealerDecisionMakerTest {
     @Test
     void testComplexStrategyValid() {

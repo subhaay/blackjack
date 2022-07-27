@@ -18,6 +18,10 @@ import org.mgm.bj.util.PlayerHelper;
  * @author avipokhrel
  */
 public class Blackjack {
+    /**
+     * This method will run the application.
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             int numOfPlayers = Integer.parseInt(args[0]);

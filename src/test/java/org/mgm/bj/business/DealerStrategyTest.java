@@ -1,14 +1,16 @@
 package org.mgm.bj.business;
 
-import org.mgm.bj.business.DealerStrategy;
+import org.junit.jupiter.api.Test;
 import org.mgm.bj.model.Card;
 import org.mgm.bj.model.Hand;
 import org.mgm.bj.model.Suit;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+/**
+ * DealerStrategyTest contains test cases for DealerStrategy.
+ * @author avipokhrel
+ */
 public class DealerStrategyTest {
     @Test
     void testDealerStrategyValid() {

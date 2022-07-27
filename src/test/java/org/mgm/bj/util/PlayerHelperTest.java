@@ -17,6 +17,10 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * PlayerHelperTest contains test cases for PlayerHelper.
+ * @author avipokhrel
+ */
 public class PlayerHelperTest {
 
     private final PrintStream stdOut = System.out;

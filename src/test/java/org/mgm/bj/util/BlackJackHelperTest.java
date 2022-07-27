@@ -14,7 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+/**
+ * BlackJackHelperTest contains test cases for BlackJackHelper.
+ * @author avipokhrel
+ */
 public class BlackJackHelperTest {
 
     private final PrintStream stdOut = System.out;
