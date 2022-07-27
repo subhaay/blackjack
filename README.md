@@ -85,3 +85,7 @@ In the design there are Card, Deck, Hand and Suit as model objects.
 1. Assisting player with game play
 2. Hit/stand option to fetch new card or stand
 3. Calculate the total score of a player's hand
+
+## Java Docs
+Java Docs has been generated and can be accessed within javadocs folder. 
+![Java Doc](/images/javaDoc.png?raw=true "Java Docs")
